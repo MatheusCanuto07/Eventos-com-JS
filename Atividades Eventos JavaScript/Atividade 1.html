@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios addEventlistener</title>
+</head>
+
+<body>
+    <button id="btn">Acionar Evento</button>
+    <button id="btn2">Remover um Evento</button>
+    <script>
+        let teste = function () {
+            console.log("Olá mundo!");
+        }
+        //Primeiro erro está na linha abaixo tem um getelementbyid sem id 
+        document.getElementById("btn").addEventListener('click', teste);
+        //Na linha abaixo temos um removeeventlistener quando queremos adicionar m evento
+        document.getElementById("btn2").addEventListener('click', () => {
+            //Nessa linha queremos remover o evento de clique do btn e não do btn2
+            document.getElementById("btn").removeEventListener("click", teste);
+            document.getElementById("btn").addEventListener("mouseover", teste);
+        });
+
+    </script>
+</body>
+
+</html>

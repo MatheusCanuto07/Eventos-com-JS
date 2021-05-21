@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+</head>
+<body>
+    <p id="valor">Ola mundoJS!</p>
+    <script>
+        //Na linha abaixo estamos puxando um elemento pela tag name utizando # antes devemos retirar o #
+        let elementoid = document.querySelector("p")
+        //Como estamos utiliznado o evento dentro do Script e não dentro da tag não precisa colocar o on Antes do evento
+        elementoid.addEventListener("click", () => {
+            console.log("Clicou em: ",event.target.nodeName);
+            console.log("Clicou em: ",event.target.value);
+            console.log("Clicou em: ",event.target);
+        }); 
+        //Para deixar o codigo mais compacto adicionei uma Arrow Function
+    </script>
+</body>
+</html>
